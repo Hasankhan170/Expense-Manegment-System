@@ -52,6 +52,43 @@ ul{
     background-color: rgb(244, 244, 244);
 }
 
+
+/* table  */
+
+.table-container {
+    width: 70%;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+
+}
+table, th, td {
+    border: 1px solid #ddd;
+
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+td{
+    font-size: 20px;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .table-container{
+        width: 100%;
+    }
+    table, th, td {
+        text-align: center;
+    }
+   
+}
+
+
 @media(max-width:525px){
     form{
         width: 100%;
