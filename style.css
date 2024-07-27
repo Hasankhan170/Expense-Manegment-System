@@ -1,0 +1,66 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color: rgb(244, 244, 244);
+    padding: 40px;
+}
+
+.expense{
+    width: 300px;
+    padding: 15px 20px;
+    outline: none;
+    font-weight: bold;
+    border: none;
+}
+
+.amount{
+    width: 300px;
+    padding: 15px 20px;
+    outline: none;
+    font-weight: bold;
+    border: none;
+}
+
+.btn{
+    width: 100%;
+    padding: 15px 20px;
+    outline: none;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(29, 255, 29);
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color: rgb(244, 244, 244);
+}
+
+@media(max-width:525px){
+    form{
+        width: 100%;
+    }
+}
+
+@media(max-width:330px){
+    .expense, .amount{
+        width: 100%;
+    }
+
+}
