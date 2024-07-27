@@ -85,6 +85,10 @@ td{
     table, th, td {
         text-align: center;
     }
+    td{
+        font-size: 18px;
+        font-weight: bold;
+    }
    
 }
 
