@@ -1,9 +1,10 @@
 const form = document.querySelector('form');
 const expense = document.querySelector('.expense');
 const amount = document.querySelector('.amount');
+const totalAmount = document.querySelector(".span")
 const showValue = document.querySelector('tbody');
 let arr = [];
-
+// let score = 0
 form.addEventListener('submit' , (e)=>{
     e.preventDefault();
 
@@ -13,18 +14,20 @@ form.addEventListener('submit' , (e)=>{
     console.log(expenseShow);
     console.log(amountShow);
 
-    // if(expense === '' || amount === ''){
-    //     alert('Please fill all fields');
-    //     return;
-    // }
 
     arr.push({expenseShow,amountShow});
+
+    // const showTotalAmount = score + amountShow
+    // totalAmount.innerHTML += showTotalAmount
+    // console.log(showTotalAmount);
+
 
     expense.value = '';
     amount.value = '';
 
     rendarEntries();
-}) ;
+  
+});
 
 function rendarEntries(){
 
@@ -41,6 +44,7 @@ function rendarEntries(){
         `;
         showValue.innerHTML += row;
     });
+ 
 };
 
 function deleteEntry(index){
@@ -52,6 +56,16 @@ function editEntry(index){
 
     const newExpense = prompt('Update Expense');
     const newAmount = prompt('Update Amount');
+
+    if(newExpense === null || newAmount === null){
+        alert('please enter value')
+        return;
+    }
+    if(newExpense === '' || newAmount === ''){
+        alert('fill this value')
+        return
+    }
+       
 
     arr[index].expenseShow = newExpense;
     arr[index].amountShow = newAmount;
