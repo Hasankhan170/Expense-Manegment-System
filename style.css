@@ -78,19 +78,6 @@ td{
     font-size: 20px;
     font-weight: bold;
 }
-@media (max-width: 600px) {
-    .table-container{
-        width: 100%;
-    }
-    table, th, td {
-        text-align: center;
-    }
-    td{
-        font-size: 18px;
-        font-weight: bold;
-    }
-   
-}
 .delete-btn{
     background-color: red;
     color: white;
@@ -108,6 +95,31 @@ td{
     border: none;
     cursor: pointer;
 }
+
+.head{
+    text-align: center;
+}
+
+.ems{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .table-container{
+        width: 100%;
+    }
+    table, th, td {
+        text-align: center;
+    }
+    td{
+        font-size: 18px;
+        font-weight: bold;
+    }
+   
+}
+
 
 @media(max-width:525px){
     form{

@@ -4,7 +4,7 @@ const amount = document.querySelector('.amount');
 const totalAmount = document.querySelector(".span")
 const showValue = document.querySelector('tbody');
 let arr = [];
-// let score = 0
+
 form.addEventListener('submit' , (e)=>{
     e.preventDefault();
 
@@ -17,9 +17,6 @@ form.addEventListener('submit' , (e)=>{
 
     arr.push({expenseShow,amountShow});
 
-    // const showTotalAmount = score + amountShow
-    // totalAmount.innerHTML += showTotalAmount
-    // console.log(showTotalAmount);
 
 
     expense.value = '';
@@ -32,6 +29,7 @@ form.addEventListener('submit' , (e)=>{
 function rendarEntries(){
 
     showValue.innerHTML = '';
+    let total = 0
 
     arr.forEach((entry,index)=> {
         const row = `
@@ -43,7 +41,10 @@ function rendarEntries(){
             </tr>
         `;
         showValue.innerHTML += row;
+        total += parseFloat(entry.amountShow)
     });
+    totalAmount.innerHTML = `Total Amount: ${total}`;
+    console.log(total);
  
 };
 
